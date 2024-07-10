@@ -1,0 +1,218 @@
+
+<div class="totebagcontainer">
+        <h1 class="productsec">TOTEBAGS</h1>
+        <div class="listofproducts">
+            <div class="products">
+                <h1 class="productname">Totebag1</h1>
+                <img class="product-img" src="tote1.jpg">
+                <button class="productbtn">Buy</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1 class="modalproduct">Totebag1</h1>
+                        <div class="productinfo">
+                            <div class="productimgsec">
+                                <img class="product-img" src="tote1.jpg">
+                            </div>
+                            <div class="info">
+                <?php
+                // Assuming $conn is your database connection variable
+                $merch_id = 5; // Change this value based on the current product
+
+                $sql = "SELECT * FROM `merchandise details` WHERE merch_id = $merch_id";
+                $result5 = mysqli_query($con, $sql);
+                $row5 = mysqli_fetch_assoc($result5);
+
+                if ($row5) {
+                ?>
+                    <b><p class="modaldescription">Merch ID:</b> <?php echo $row5["merch_id"] ?> <br>
+                    <label><b>Merch Name:</b> <?php echo $row5["merch_name"] ?></label><br>
+                    <label><b>Price:</b> <?php echo $row5["price"] ?></label><br>
+                    <label><b>Stocks:</b> <?php echo $row5["stock_available"] ?></label><br>
+
+                    <!-- Add any other dynamic content here based on your database fields -->
+
+                    <a class="button-like" href="config/update5.php?merch_id=<?php echo $row5["merch_id"] ?>">UPDATE</a>
+                    <a class="button-like" href="config/delete5.php?merch_id=<?php echo $row5["merch_id"] ?>">DELETE</a></p>
+                <?php
+                } else {
+                    echo "Product not found"; // Display a message if the product is not found
+                }
+                ?>
+            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="products">
+                <h1 class="productname">Totebag2</h1>
+                <img class="product-img" src="tote2.jpg">
+                <button class="productbtn">Edit</button>
+                <div class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1 class="modalproduct">Totebag2</h1>
+        <div class="productinfo">
+            <div class="productimgsec">
+                <img class="product-img" src="tote2.jpg">
+            </div>
+            <div class="info">
+                <?php
+                // Assuming $conn is your database connection variable
+                $merch_id = 6; // Change this value based on the current product
+
+                $sql = "SELECT * FROM `merchandise details` WHERE merch_id = $merch_id";
+                $result6 = mysqli_query($con, $sql);
+                $row6 = mysqli_fetch_assoc($result6);
+
+                if ($row6) {
+                ?>
+                     <b><p class="modaldescription">Merch ID:</b> <?php echo $row6["merch_id"] ?> <br>
+                    <label><b>Merch Name:</b> <?php echo $row6["merch_name"] ?></label><br>
+                    <label><b>Price:</b> <?php echo $row6["price"] ?></label><br>
+                    <label><b>Stocks:</b> <?php echo $row6["stock_available"] ?></label><br>
+
+                    <!-- Add any other dynamic content here based on your database fields -->
+
+                    <a class="button-like" href="config/update6.php?merch_id=<?php echo $row6["merch_id"] ?>">UPDATE</a>
+                    <a class="button-like" href="config/delete6.php?merch_id=<?php echo $row6["merch_id"] ?>">DELETE</a>  </p>
+                <?php
+                } else {
+                    echo "Product not found"; // Display a message if the product is not found
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="products">
+                <h1 class="productname">Totebag3</h1>
+                <img class="product-img" src="tote3.jpg">
+                <button class="productbtn">Edit</button>
+                <div class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1 class="modalproduct">SHIRT1</h1>
+        <div class="productinfo">
+            <div class="productimgsec">
+                <img class="product-img" src="shirt1.jpg">
+            </div>
+            <div class="info">
+                <?php
+                // Assuming $conn is your database connection variable
+                $merch_id = 7; // Change this value based on the current product
+
+                $sql = "SELECT * FROM `merchandise details` WHERE merch_id = $merch_id";
+                $result7 = mysqli_query($con, $sql);
+                $row7 = mysqli_fetch_assoc($result7);
+
+                if ($row7) {
+                ?>
+                    <b><p class="modaldescription">Merch ID:</b> <?php echo $row7["merch_id"] ?> <br>
+                    <label><b>Merch Name:</b> <?php echo $row7["merch_name"] ?></label><br>
+                    <label><b>Price:</b> <?php echo $row7["price"] ?></label><br>
+                    <label><b>Stocks:</b> <?php echo $row7["stock_available"] ?></label><br>
+
+                    <!-- Add any other dynamic content here based on your database fields -->
+
+                    <a class="button-like" href="config/update7.php?merch_id=<?php echo $row7["merch_id"] ?>">UPDATE</a>
+                    <a class="button-like" href="config/delete7.php?merch_id=<?php echo $row7["merch_id"] ?>">DELETE</a></p>
+                <?php
+                } else {
+                    echo "Product not found"; // Display a message if the product is not found
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="lanyardcontainer">
+        <h1 class="productsec">LANYARDS</h1>
+        <div class="listofproducts">
+            <div class="products">
+                <h1 class="productname">Lanyard1</h1>
+                <img class="product-img" src="lanyard1.jpg">
+                <button class="productbtn">Edit</button>
+                <div class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1 class="modalproduct">SHIRT1</h1>
+        <div class="productinfo">
+            <div class="productimgsec">
+                <img class="product-img" src="shirt1.jpg">
+            </div>
+            <div class="info">
+                <?php
+                // Assuming $conn is your database connection variable
+                $merch_id = 8; // Change this value based on the current product
+
+                $sql = "SELECT * FROM `merchandise details` WHERE merch_id = $merch_id";
+                $result8 = mysqli_query($con, $sql);
+                $row8 = mysqli_fetch_assoc($result8);
+
+                if ($row8) {
+                ?>
+                     <b><p class="modaldescription">Merch ID:</b> <?php echo $row8["merch_id"] ?> <br>
+                    <label><b>Merch Name:</b> <?php echo $row8["merch_name"] ?></label><br>
+                    <label><b>Price:</b> <?php echo $row8["price"] ?></label><br>
+                    <label><b>Stocks:</b> <?php echo $row8["stock_available"] ?></label><br>
+                    <!-- Add any other dynamic content here based on your database fields -->
+
+                    <a class="button-like" href="config/update8.php?merch_id=<?php echo $row8["merch_id"] ?>">UPDATE</a>
+                    <a class="button-like" href="config/delete8.php?merch_id=<?php echo $row8["merch_id"] ?>">DELETE</a>
+                </p>
+                <?php
+                } else {
+                    echo "Product not found"; // Display a message if the product is not found
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="products">
+                <h1 class="productname">Lanyard2</h1>
+                <img class="product-img" src="lanyard2.jpg">
+                <button class="productbtn">Edit</button>
+                <div class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1 class="modalproduct">Lanyard2</h1>
+        <div class="productinfo">
+            <div class="productimgsec">
+                <img class="product-img" src="shirt1.jpg">
+            </div>
+            <div class="info">
+                <?php
+                // Assuming $conn is your database connection variable
+                $merch_id = 9; // Change this value based on the current product
+
+                $sql = "SELECT * FROM `merchandise details` WHERE merch_id = $merch_id";
+                $result9 = mysqli_query($con, $sql);
+                $row9 = mysqli_fetch_assoc($result9);
+
+                if ($row9) {
+                ?>
+                    <b><p class="modaldescription">Merch ID:</b> <?php echo $row9["merch_id"] ?> <br>
+                    <label><b>Merch Name:</b> <?php echo $row9["merch_name"] ?></label><br>
+                    <label><b>Price:</b> <?php echo $row9["price"] ?></label><br>
+                    <label><b>Stocks:</b> <?php echo $row9["stock_available"] ?></label><br>
+
+                    <!-- Add any other dynamic content here based on your database fields -->
+                    
+                    <a class="button-like" href="config/update9.php?merch_id=<?php echo $row9["merch_id"] ?>">UPDATE</a>
+                    <a class="button-like" href="config/delete9.php?merch_id=<?php echo $row9["merch_id"] ?>">DELETE</a>
+                </p>
+                <?php
+                } else {
+                    echo "Product not found"; // Display a message if the product is not found
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+</div>

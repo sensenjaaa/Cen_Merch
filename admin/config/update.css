@@ -1,0 +1,124 @@
+body{
+    background: white;
+    color: #1b1b32;
+    font-family: Helvetica;
+    margin: 0;
+}
+
+header {
+   width: 100%;
+   height: 100px;
+   background-color: #721315;
+   display: flex;
+   align-items: center;
+   justify-content:center;
+   position: fixed;
+   top: 0;
+}
+
+.topnav{
+   background-color:#721315;
+   overflow:hidden;
+}
+
+.topnav a{
+   float:left;
+   color:white;
+   text-align: center;
+   padding:14px 16px;
+   text-decoration:none;
+   font-size:17px;
+}
+
+.topnav a:hover{
+   background-color:#ddd;
+   color:black;
+}
+
+.topnav a.active{
+   background-color:blue;
+   color:white;
+}
+
+.topnav input[type=text] {
+   float: right;
+   padding: 6px;
+   border: none;
+   margin-top: 8px;
+   margin-right: 16px;
+   font-size: 17px;
+}
+
+.topnav input[type=text] {
+   border: 1px solid #ccc;
+}
+
+h1{color: white;}
+h1:not(.headingnav,.productname,.productsec,.modalproduct,){
+   margin: 0 auto;
+   margin-left: 100px;
+   text-align:center;
+   color: #1b1b32;
+}
+
+.headingnav{
+   font-size:50px;
+   text-align:center;
+   margin-right:170px;
+}
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    width: 50vw;
+    min-width: 300px;
+}
+
+b,
+p {
+    font-size: 16px;
+}
+
+button.button-like {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #800000;
+    color: white;
+    border: 1px solid #800000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.button-like:hover {
+    background-color: #990000;
+}
+a.button-like {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #800000;
+    color: white;
+    border: 1px solid #800000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a.button-like:hover {
+    background-color: #990000;
+}

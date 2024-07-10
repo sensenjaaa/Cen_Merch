@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css"/>
+</head>
+<body>
+    <header>
+        <h1 class="headingnav">CEN MERCH</h1>
+        <div class="topnav">
+            <a href="user.php" target="_parent">ACCOUNT</a>
+			<a href="home.html" target="_parent">HOME</a>
+			<a href="products.html" target="_parent">PRODUCTS</a>
+			<a href="cart.php" target="_parent">CART</a>
+			<a href="about.html" target="_parent">ABOUT</a>
+            <a href="otherpro.php" target="_parent">OTHER ITEMS</a>
+        </div>
+    </header>
+    <section>
+    <form method="post" action="cart.php">
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Size</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+
+            <?php if (!empty($_SESSION['cart'])): ?>
+                <?php $overallTotal = 0; ?>
+                <?php foreach ($_SESSION['cart'] as $cartId => $item): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($item['merch_name']); ?></td>
+                        <td>PHP<?php echo $item['price']; ?></td>
+                        <td><?php echo htmlspecialchars($item['size']); ?></td>
+                        <td>
+                            <input type="number" name="order_amount[<?php echo $cartId; ?>]" value="<?php echo $item['order_amount']; ?>" min="0">
+                        </td>
+                        <td>PHP<?php echo $item['price'] * $item['order_amount']; ?></td>
+                        <td>
+                            <a class="actionbtn" href="cart.php?remove_item=<?php echo $cartId; ?>" onclick="return confirm('Are you sure you want to remove this item?')">Remove</a>
+                        </td>
+                    </tr>
+                    <?php $overallTotal += $item['price'] * $item['order_amount']; ?>
+                <?php endforeach; ?>
+
+                <tr>
+                    <td colspan="4"><strong>Total:</strong></td>
+                    <td><strong>PHP<?php echo $overallTotal; ?></strong></td>
+                    <td><button type="submit" name="update_cart" class="button">Update Cart</button></td>
+                </tr>
+            <?php else: ?>
+                <tr>
+                    <td colspan="6">Your cart is empty.</td>
+                </tr>
+            <?php endif; ?>
+        </table>
+    </form>
+    <a href="checkout.php" class="checkout-btn">Proceed to Checkout</a>
+    </section>
+</body>
+</html>

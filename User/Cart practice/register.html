@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css"/>
+</head>
+<body>
+    <header>
+        <h1 class="heading">CEN MERCH</h1>
+    </header>
+    <main>
+    <fieldset id="student-info">
+        <table>
+            <tr>
+                <th>
+                    <h1>Welcome to CEN MERCH!</h1>
+                    <img class="logo-img" src="logo.png">
+                </th>
+                <td>
+                    <div class="registercontainer">
+                        <h2>Sign Up</h2>
+                        <p>Please fill up this form to create an account.</p>
+                        <hr>
+                        <form action="register.php" method="post">
+                            <label for="student_id">Student ID:</label> 
+                            <input type="number" id="student_id" name="student_id" maxlength="10" placeholder="Enter Your Student ID" required><br><br>
+                            <label for="first_name">First Name:</label>
+                            <input type="text" id="first_name" name="first_name" maxlength="20" placeholder="Enter Your First Name" required><br><br>
+                            <label for="middle_name">Middle Name:</label>
+                            <input type="text" id="middle_name" name="middle_name" maxlength="20" placeholder="Enter Your Middle Name" required><br><br>
+                            <label for="last_name">Last Name:</label>
+                            <input type="text" id="last_name" name="last_name" maxlength="20" placeholder="Enter Your Last Name" required><br><br>
+                            <label for="school_email">School Email:</label>
+                            <input type="text" id="school_email" name="school_email" maxlength="40" placeholder="Enter Your Email" required><br><br>
+
+                            <hr>
+                            <b>Address</b><br>
+                            <label for="street_address">Street:</label>
+                            <input type="text" id="street_address" name="street_address" maxlength="40" placeholder="Enter Your Street" required><br><br>
+                            <label for="baranggay_address">Barangay:</label>
+                            <input type="text" id="baranggay_address" name="baranggay_address" maxlength="40" placeholder="Enter Your Barangay" required><br><br>
+                            <label for="city_address">City:</label>
+                            <input type="text" id="city_address" name="city_address" maxlength="40" placeholder="Enter Your City" required><br><br>
+                            <label for="province_address">Province:</label>
+                            <input type="text" id="province_address" name="province_address" maxlength="40" placeholder="Enter Your Province" required><br><br>
+                            <label for="zip_code">Zip Code:</label>
+                            <input type="number" id="zip_code" name="zip_code" maxlength="4"placeholder="Enter Your Zip Code" required><br><br>
+                            <label for="contact_no">Contact Number:</label>
+                            <input type="tel" id="contact_no" name="contact_no" maxlength="11" placeholder="09*********" required><br><br>
+                            <label for="password">Create a Password:</label>
+                            <input type="password" id="password" name="password" required pattern=".{8,}" title="Must contain at least 8 characters" required><br><br>
+                            <input type="submit" value="Sign Up">
+                        </form>
+                        <form action="login.html" method="post">
+                                <button type="submit">Cancel</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    </main>
+    <script>
+    document.getElementById("zip_code").addEventListener("input", function(){
+        if(this.value.length > 4){
+            this.value = this.value.slice(0, 4);
+        }
+    });
+    </script>
+</body>
+</html>

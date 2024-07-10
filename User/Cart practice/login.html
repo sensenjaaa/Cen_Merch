@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+    <header>
+        <h1 class="heading">CEN MERCH</h1>
+    </header>
+
+    <main>
+        <fieldset id="student-info">
+            <table>
+                <tr>
+                    <th>
+                        <h1>Welcome to CEN MERCH!</h1>
+                        <img class="logo-img" src="logo.png" alt="CEN MERCH Logo">
+                    </th>
+                    <td>
+                        <div class="logincontainer">
+                            <h2>Login</h2>
+                            <p>Please fill out this form to log in to your account.</p>
+                            <hr>
+                            <form action="login.php" method="post">
+                                <div class=>
+                                    <label for="student_id">Student ID:</label>
+                                    <input type="number" id="student_id" name="student_id" maxlength="10" placeholder="Enter Student ID" required>
+                                </div>
+                                <br>
+                                <div class=>
+                                    <label for="password">Enter Password:</label>
+                                    <input type="password" id="password" name="password" placeholder="********" required>
+                                </div>
+                                <br>
+                                <div>
+                                    <input type="submit" name="submit" value="Login">
+                                </div>
+                            </form>
+                            <form action="login.html" method="post">
+                                <button type="submit">Cancel</button>
+                            </form>
+                            <form action="register.html" method="post">
+                                <button type="submit">Create an Account</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </main>
+</body>
+</html>

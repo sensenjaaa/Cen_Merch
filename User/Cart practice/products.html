@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Products</title>
+    <link rel="stylesheet" href="products.css"/>
+    <script src="product_search.js"></script>
+</head>
+<body>
+    <header>
+		<h1 class="headingnav">CEN MERCH</h1>
+		<div class="topnav">
+            <a href="user.php" target="_parent">ACCOUNT</a>
+			<a href="home.html" target="_parent">HOME</a>
+			<a href="products.html" target="_parent">PRODUCTS</a>
+			<a href="cart.php" target="_parent">CART</a>
+			<a href="about.html" target="_parent">ABOUT</a>
+            <a href="otherpro.php" target="_parent">OTHER ITEMS</a>
+		</div>
+        <div class="search-container">
+                <input type="text" id="search-item" placeholder="Search Products" name="search" onkeyup="search()">
+            </form>
+        </div>      
+	</header>
+    <div class="productcontainer">
+        <h1 class="productsec">SHIRTS</h1>
+        <div class="listofproducts">
+            <div class="products">
+                <h1 class="productname">SHIRT1</h1>
+                <img class="product-img" src="shirt1.jpg">
+                <button class="productbtn">Buy</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1 class="modalproduct">SHIRT1</h1>
+                        <div class="productinfo">
+                            <div class="productimgsec">
+                                <img class="product-img" src="shirt1.jpg">
+                            </div>
+                            <div class="info">
+                                <b><p class="modaldescription">400PHP<p></b>
+                                <form action="products.php" method="POST">
+                                    <input type="hidden" name="merch_id" value="1">
+                                    <label for="size">Size:</label>
+                                    <select name="size" required>
+                                        <option value="XtraSmall">XS</option>
+                                        <option value="Small">S</option>
+                                        <option value="Medium">M</option>
+                                        <option value="Large">L</option>
+                                        <option value="XtraLarge">XL</option>
+                                        <option value="XXLarge">XXL</option>
+                                    </select>
+                                    <br>
+                                    <label for="order_amount">Quantity:</label>
+                                    <select name="order_amount" required>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <br>
+                                    <input class="addtocart" type="submit" value="Add to Cart">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <h1 class="productname">SHIRT2</h1>
+                <img class="product-img" src="shirt2.jpg">
+                <button class="productbtn">Buy</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1 class="modalproduct">SHIRT2</h1>
+                        <div class="productinfo">
+                            <div class="productimgsec">
+                                <img class="product-img" src="shirt2.jpg">
+                            </div>
+                            <div class="info">
+                                <b><p class="modaldescription">400PHP<p></b>
+                                <form action="products.php" method="POST">
+                                    <input type="hidden" name="merch_id" value="2">
+                                    <label for="size">Size:</label>
+                                    <select name="size" required>
+                                        <option value="XtraSmall">XS</option>
+                                        <option value="Small">S</option>
+                                        <option value="Medium">M</option>
+                                        <option value="Large">L</option>
+                                        <option value="XtraLarge">XL</option>
+                                        <option value="XXLarge">XXL</option>
+                                    </select>
+                                    <br>
+                                    <label for="order_amount">Quantity:</label>
+                                    <select name="order_amount" required>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <br>
+                                    <input class="addtocart" type="submit" value="Add to Cart">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <h1 class="productname">SHIRT3</h1>
+                <img class="product-img" src="shirt3.jpg">
+                <button class="productbtn">Buy</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1 class="modalproduct">SHIRT3</h1>
+                        <div class="productinfo">
+                            <div class="productimgsec">
+                                <img class="product-img" src="shirt3.jpg">
+                            </div>
+                            <div class="info">
+                                <b><p class="modaldescription">400PHP<p></b>
+                                <form action="products.php" method="POST">
+                                    <input type="hidden" name="merch_id" value="3">
+                                    <label for="size">Size:</label>
+                                    <select name="size" required>
+                                        <option value="XtraSmall">XS</option>
+                                        <option value="Small">S</option>
+                                        <option value="Medium">M</option>
+                                        <option value="Large">L</option>
+                                        <option value="XtraLarge">XL</option>
+                                        <option value="XXLarge">XXL</option>
+                                    </select>
+                                    <br>
+                                    <label for="order_amount">Quantity:</label>
+                                    <select name="order_amount" required>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <br>
+                                    <input class="addtocart" type="submit" value="Add to Cart">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <h1 class="productname">SHIRT4</h1>
+                <img class="product-img" src="shirt4.jpg">
+                <button class="productbtn">Buy</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1 class="modalproduct">SHIRT4</h1>
+                        <div class="productinfo">
+                            <div class="productimgsec">
+                                <img class="product-img" src="shirt4.jpg">
+                            </div>
+                            <div class="info">
+                                <b><p class="modaldescription">400PHP<p></b>
+                                <form action="products.php" method="POST">
+                                    <input type="hidden" name="merch_id" value="4">
+                                    <label for="size">Size:</label>
+                                    <select name="size" required>
+                                        <option value="XtraSmall">XS</option>
+                                        <option value="Small">S</option>
+                                        <option value="Medium">M</option>
+                                        <option value="Large">L</option>
+                                        <option value="XtraLarge">XL</option>
+                                        <option value="XXLarge">XXL</option>
+                                    </select>
+                                    <br>
+                                    <label for="order_amount">Quantity:</label>
+                                    <select name="order_amount" required>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <br>
+                                    <input class="addtocart" type="submit" value="Add to Cart">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <h1 class="productname">SHIRT5</h1>
+                <img class="product-img" src="shirt5.jpg">
+                <button class="productbtn">Buy</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1 class="modalproduct">SHIRT5</h1>
+                        <div class="productinfo">
+                            <div class="productimgsec">
+                                <img class="product-img" src="shirt5.jpg">
+                            </div>
+                            <div class="info">
+                                <b><p class="modaldescription">400PHP<p></b>
+                                <form action="products.php" method="POST">
+                                    <input type="hidden" name="merch_id" value="5">
+                                    <label for="size">Size:</label>
+                                    <select name="size" required>
+                                        <option value="XtraSmall">XS</option>
+                                        <option value="Small">S</option>
+                                        <option value="Medium">M</option>
+                                        <option value="Large">L</option>
+                                        <option value="XtraLarge">XL</option>
+                                        <option value="XXLarge">XXL</option>
+                                    </select>
+                                    <br>
+                                    <label for="order_amount">Quantity:</label>
+                                    <select name="order_amount" required>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <br>
+                                    <input class="addtocart" type="submit" value="Add to Cart">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="productsec">TOTEBAGS</h1>
+        <div class="listofproducts">
+            <div class="products">
+                <h1 class="productname">Totebag1</h1>
+                <img class="product-img" src="tote1.jpg">
+                <button class="productbtn">Buy</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1 class="modalproduct">Totebag1</h1>
+                        <div class="productinfo">
+                            <div class="productimgsec">
+                                <img class="product-img" src="tote1.jpg">
+                            </div>
+                            <div class="info">
+                                <b><p class="modaldescription">300PHP<p></b>
+                                <form action="products.php" method="POST">
+                                    <input type="hidden" name="merch_id" value="6">
+                                    <label for="order_amount">Quantity:</label>
+                                    <select name="order_amount" required>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <br>
+                                    <input class="addtocart" type="submit" value="Add to Cart">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <h1 class="productname">Totebag2</h1>
+                <img class="product-img" src="tote2.jpg">
+                <button class="productbtn">Buy</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1 class="modalproduct">Totebag2</h1>
+                        <div class="productinfo">
+                            <div class="productimgsec">
+                                <img class="product-img" src="tote2.jpg">
+                            </div>
+                            <div class="info">
+                                <b><p class="modaldescription">160PHP<p></b>
+                                <form action="products.php" method="POST">
+                                    <input type="hidden" name="merch_id" value="7">
+                                    <label for="order_amount">Quantity:</label>
+                                    <select name="order_amount" required>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <br>
+                                    <input class="addtocart" type="submit" value="Add to Cart">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <h1 class="productname">Totebag3</h1>
+                <img class="product-img" src="tote3.jpg">
+                <button class="productbtn">Buy</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1 class="modalproduct">Totebag3</h1>
+                        <div class="productinfo">
+                            <div class="productimgsec">
+                                <img class="product-img" src="tote3.jpg">
+                            </div>
+                            <div class="info">
+                                <b><p class="modaldescription">320PHP<p></b>
+                                <form action="products.php" method="POST">
+                                    <input type="hidden" name="merch_id" value="8">
+                                    <label for="order_amount">Quantity:</label>
+                                    <select name="order_amount" required>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <br>
+                                    <input class="addtocart" type="submit" value="Add to Cart">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="productsec">LANYARDS</h1>
+        <div class="listofproducts">
+            <div class="products">
+                <h1 class="productname">Lanyard1</h1>
+                <img class="product-img" src="lanyard1.jpg">
+                <button class="productbtn">Buy</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1 class="modalproduct">Lanyard1</h1>
+                        <div class="productinfo">
+                            <div class="productimgsec">
+                                <img class="product-img" src="lanyard1.jpg">
+                            </div>
+                            <div class="info">
+                                <b><p class="modaldescription">100PHP<p></b>
+                                <form action="products.php" method="POST">
+                                    <input type="hidden" name="merch_id" value="9">
+                                    <label for="order_amount">Quantity:</label>
+                                    <select name="order_amount" required>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <br>
+                                    <input class="addtocart" type="submit" value="Add to Cart">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <h1 class="productname">Lanyard2</h1>
+                <img class="product-img" src="lanyard2.jpg">
+                <button class="productbtn">Buy</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1 class="modalproduct">Lanyard2</h1>
+                        <div class="productinfo">
+                            <div class="productimgsec">
+                                <img class="product-img" src="lanyard2.jpg">
+                            </div>
+                            <div class="info">
+                                <b><p class="modaldescription">110PHP<p></b>
+                                <form action="products.php" method="POST">
+                                    <input type="hidden" name="merch_id" value="10">
+                                    <label for="order_amount">Quantity:</label>
+                                    <select name="order_amount" required>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <br>
+                                    <input class="addtocart" type="submit" value="Add to Cart">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var modalBtns = document.querySelectorAll(".productbtn");
+        modalBtns.forEach(function(btn) {
+            btn.onclick = function() {
+                var modal = this.nextElementSibling;
+                modal.style.display = "block";
+            };
+        });
+
+        var closeBtns = document.querySelectorAll(".close");
+        closeBtns.forEach(function(btn) {
+            btn.onclick = function() {
+                var modal = this.parentElement.parentElement;
+                modal.style.display = "none";
+            };
+        });
+
+        window.onclick = function(event) {
+            if (event.target.className === "modal") {
+                event.target.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

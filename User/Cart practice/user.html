@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Products</title>
+    <link rel="stylesheet" href="user.css"/>
+</head>
+<body>
+    <header>
+        <h1 class="headingnav">CEN MERCH</h1>
+        <div class="topnav">
+            <a href="user.php" target="_parent">ACCOUNT</a>
+			<a href="home.html" target="_parent">HOME</a>
+			<a href="products.html" target="_parent">PRODUCTS</a>
+			<a href="cart.php" target="_parent">CART</a>
+			<a href="about.html" target="_parent">ABOUT</a>
+        </div>
+    </header>
+    <main>
+        <section class="user">
+            <div class="user_info">
+                <h1 class="usertitle">Account Information</h1>
+                    <?php if (isset($customer_info) && isset($result_customer_orders)) : ?>
+                        <table class="user_infotb">
+                            <tr>
+                                <td><b>Student ID:</b></td>
+                                <td><?php echo $customer_info['student_id']; ?></td>
+                            </tr>
+                            <tr>
+                                <td><b>First Name:</b></td>
+                                <td><?php echo $customer_info['first_name']; ?></td>
+                            </tr>
+                            <tr>
+                                <td><b>Middle Name:</b></td>
+                                <td><?php echo $customer_info['middle_name']; ?></td>
+                            </tr>
+                            <tr>
+                                <td><b>Last Name:</b></td>
+                                <td><?php echo $customer_info['last_name']; ?></td>
+                            </tr>
+                            <tr>
+                                <td><b>School Email:</b></td>
+                                <td><?php echo $customer_info['school_email']; ?></td>
+                            </tr>
+                            <tr>
+                                <td><b>Street Address:</b></td>
+                                <td><?php echo $customer_info['street_address']; ?></td>
+                            </tr>
+                            <tr>
+                                <td><b>Baranggay Address:</b></td>
+                                <td><?php echo $customer_info['baranggay_address']; ?></td>
+                            </tr>
+                            <tr>
+                                <td><b>City:</b></td>
+                                <td><?php echo $customer_info['city_address']; ?></td>
+                            </tr>
+                            <tr>
+                                <td><b>Province:</b></td>
+                                <td><?php echo $customer_info['province_address']; ?></td>
+                            </tr>
+                            <tr>
+                                <td><b>Zip Code:</b></td>
+                                <td><?php echo $customer_info['zip_code']; ?></td>
+                            </tr>
+                            <tr>
+                                <td><b>Contact No:</b></td>
+                                <td><?php echo $customer_info['contact_no']; ?></td>
+                            </tr>
+                        </table>
+                    <?php endif; ?>
+                <button class="edit_user">Edit Information</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1 class="usertitle">Account Information</h1>
+                        <form action="user_update.php" method="post">
+                            <table class="user_updatetb">
+                            <tr>
+                                <td><label for="student_id"><b>Student ID:</b></label></td>
+                                <td><?php echo $customer_info['student_id']; ?></td>
+                            </tr>
+                            <tr>
+                                <td><label for="first_name"><b>First Name:</b></label></td>
+                                <td><input type="text" name="first_name" id="first_name" value="<?php echo $customer_info['first_name']; ?>" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="middle_name"><b>Middle Name:</b></label></td>
+                                <td><input type="text" name="middle_name" id="middle_name" value="<?php echo $customer_info['middle_name']; ?>" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="last_name"><b>Last Name:</b></label></td>
+                                <td><input type="text" name="last_name" id="last_name" value="<?php echo $customer_info['last_name']; ?>" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="school_email"><b>School Email:</b></label></td>
+                                <td><input type="email" name="school_email" id="school_email" value="<?php echo $customer_info['school_email']; ?>" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="street_address"><b>Street Address:</b></label></td>
+                                <td><input type="text" name="street_address" id="street_address" value="<?php echo $customer_info['street_address']; ?>" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="baranggay_address"><b>Baranggay Address:</b></label></td>
+                                <td><input type="text" name="baranggay_address" id="baranggay_address" value="<?php echo $customer_info['baranggay_address']; ?>" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="city_address"><b>City:</b></label></td>
+                                <td><input type="text" name="city_address" id="city_address" value="<?php echo $customer_info['city_address']; ?>" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="province_address"><b>Province:</b></label></td>
+                                <td><input type="text" name="province_address" id="province_address" value="<?php echo $customer_info['province_address']; ?>" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="zip_code"><b>Zip Code:</b></label></td>
+                                <td><input type="text" name="zip_code" id="zip_code" value="<?php echo $customer_info['zip_code']; ?>" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="contact_no"><b>Contact No:</b></label></td>
+                                <td><input type="text" name="contact_no" id="contact_no" value="<?php echo $customer_info['contact_no']; ?>" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="password"><b>Password:</b></label></td>
+                                <td><input type="password" name="password" id="password" required></td>
+                            </tr>
+                            </table>
+                            <button>Update</button>
+                        </form>
+                        <form action="user_delete.php">
+                            <button>Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr class="userhr">
+            <div class="logout">
+                <h2>You are already Log In.</h2>
+                <p> Do you want to log out your account?</p>
+                <form action="login.html" method="Post">
+                    <button class="logout-btn">Yes</button>
+                </form>
+                <form action="home.html" method="post">
+                    <button class="logout-btn">No</button>
+                </form>
+            </div>
+            
+        </section>
+        <hr>
+        <section class="user_order">
+            <h1 class="usertitle">Account Order</h1>
+            <?php if ($result_customer_orders->num_rows > 0) : ?>
+                <table>
+                    <thead>
+                        <h2>Customer Orders</h2>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Merchandise Name</th>
+                            <th>Order Amount</th>
+                            <th>Price</th>
+                            <th>Ordered Date</th>
+                            <th>Order Status</th>
+                            <th>Expected Arrival</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $totalPrice = 0;
+                        while ($orderRow = $result_customer_orders->fetch_assoc()) : ?>
+                            <tr>
+                                <td><?php echo $orderRow['order_id']; ?></td>
+                                <td><?php echo $orderRow['merch_name']; ?></td>
+                                <td><?php echo $orderRow['order_amount']; ?></td>
+                                <td>$<?php echo $orderRow['price']; ?></td>
+                                <td><?php echo $orderRow['ordered_date']; ?></td>
+                                <td><?php echo $orderRow['order_status']; ?></td>
+                                <td><?php echo $orderRow['expected_arrival'] ?? 'N/A'; ?></td>
+                            </tr>
+                            <?php $totalPrice += $orderRow['order_amount'] * $orderRow['price']; endwhile; ?>
+                        <tr>
+                            <td colspan="7"><p>Total Price: $<?php echo $totalPrice; ?></p></td>
+                        </tr>
+                    </tbody>
+                </table>
+            <?php else : ?>
+                <p class="no_orders">No orders found for the specified student ID.</p>
+            <?php endif; ?>
+        </section>
+    </main>
+    <script>
+        var modalBtns = document.querySelectorAll(".edit_user");
+        modalBtns.forEach(function(btn) {
+            btn.onclick = function() {
+                var modal = this.nextElementSibling;
+                modal.style.display = "block";
+            };
+        });
+
+        var closeBtns = document.querySelectorAll(".close");
+        closeBtns.forEach(function(btn) {
+            btn.onclick = function() {
+                var modal = this.parentElement.parentElement;
+                modal.style.display = "none";
+            };
+        });
+
+        window.onclick = function(event) {
+            if (event.target.className === "modal") {
+                event.target.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>
